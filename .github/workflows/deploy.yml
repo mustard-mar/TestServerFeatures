@@ -26,9 +26,6 @@ jobs:
             git reset --hard HEAD
             git pull origin master
             
-            # 3. На всякий случай глушим всё на порту 5000 перед перезапуском службы
-            sudo fuser -k 5000/tcp || true
-            
             pip install --upgrade pip
             pip install -r requirements.txt
             
