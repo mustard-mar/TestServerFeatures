@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <nav class ="nav">
+            <a href="/">Главная</a>
+            <a href="/profile">Профиль</a>
+            {% if user.is_active %}
+            <a href="/auf">Выйти</a>
+            {% else %}
+            <a href="/auf">Войти</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Сюда дочерние шаблоны будут вставлять свой контент -->
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Мой сайтик</p>
+    </footer>
+
+</body>
+</html>
