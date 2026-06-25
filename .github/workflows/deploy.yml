@@ -23,7 +23,12 @@ jobs:
             source projects/test/venv/bin/activate
             cd projects/test/TestServerFeatures/
 
-            git pull origin master
+            git reset --hard HEAD
+            git pull origin dev
+            
+            # 3. На всякий случай глушим всё на порту 5000 перед перезапуском службы
+            sudo fuser -k 5000/tcp || true
+            
             pip install --upgrade pip
             pip install -r requirements.txt
             
