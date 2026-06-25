@@ -27,4 +27,4 @@ jobs:
             pip install --upgrade pip
             pip install -r requirements.txt
             
-            sudo systemctl restart my-bot.service
+            python3 app.py
