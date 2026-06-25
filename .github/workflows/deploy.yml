@@ -23,7 +23,7 @@ jobs:
             source projects/test/venv/bin/activate
             cd projects/test/TestServerFeatures/
 
-            git pull origin main
+            git pull origin master
             pip install --upgrade pip
             pip install -r requirements.txt
             
