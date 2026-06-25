@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main  # Скрипт срабатывает при пуше в ветку main
+      - master  # Скрипт срабатывает при пуше в ветку main
 
 jobs:
   deploy:
